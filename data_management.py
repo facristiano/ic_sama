@@ -7,7 +7,7 @@ import pandas as pd
 def convert_file_path_os(path):
     # this function simply converts the file path to correspond to the machine OS system
     import platform
-    if system == 'Linux' or system == 'Darwin':  #1 confere se o sistema operacional é linux ou mac
+    if platform.system() == 'Linux' or platform.system() == 'Darwin':  #1 confere se o sistema operacional é linux ou mac
         path = path.replace('\\', '/')
     return path
 
